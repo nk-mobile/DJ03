@@ -1,0 +1,47 @@
+{% extends 'cats/base.html' %}
+{% load static %}
+
+{% block title %}Главная | Мир котиков{% endblock %}
+
+{% block content %}
+<div class="jumbotron bg-light p-5 rounded-lg">
+    <h1 class="display-4">Добро пожаловать в мир котиков!</h1>
+    <p class="lead">Узнайте больше о наших пушистых друзьях.</p>
+    <hr class="my-4">
+    <p>На нашем сайте вы найдете информацию о различных породах кошек, фотогалерею и контакты.</p>
+    <a class="btn btn-primary btn-lg" href="{% url 'breeds' %}" role="button">Узнать о породах</a>
+</div>
+
+<div class="row mt-4">
+    <div class="col-md-4">
+        <div class="card">
+            <img src="{% static 'cats/cat01.png' %}"  class="card-img-top" alt="Котик">
+            <div class="card-body">
+                <h5 class="card-title">Милые котики</h5>
+                <p class="card-text">Посмотрите на этих очаровательных созданий в нашей галерее.</p>
+                <a href="{% url 'gallery' %}" class="btn btn-outline-primary">Перейти в галерею</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card">
+            <img src="{% static 'cats/cat02.png' %}"  class="card-img-top" alt="Котик">
+            <div class="card-body">
+                <h5 class="card-title">Разные породы</h5>
+                <p class="card-text">Узнайте о различных породах кошек и их особенностях.</p>
+                <a href="{% url 'breeds' %}" class="btn btn-outline-primary">Узнать о породах</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card">
+            <img src="{% static 'cats/cat03.png' %}" class="card-img-top" alt="Котик">
+            <div class="card-body">
+                <h5 class="card-title">Свяжитесь с нами</h5>
+                <p class="card-text">Есть вопросы? Напишите нам, мы с радостью ответим!</p>
+                <a href="{% url 'contacts' %}" class="btn btn-outline-primary">Контакты</a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

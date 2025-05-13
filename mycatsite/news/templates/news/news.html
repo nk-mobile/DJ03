@@ -1,0 +1,30 @@
+{% extends 'cats/base.html' %}
+
+{% block title %}Новости | Мир котиков{% endblock %}
+
+{% block content %}
+<div class="container mt-4">
+    <h1 class="mb-4">Новости о котиках</h1>
+
+    <div class="row">
+        <div class="col-md-8 mx-auto">
+            {% for new in news %}
+            <div class="card mb-4">
+                <div class="card-body">
+                    <h2 class="card-title">{{ new.title }}</h2>
+                    <p class="card-subtitle mb-2 text-muted">
+                        Опубликовано: {{ new.pub_date|date:"d.m.Y H:i" }} | Автор: {{ new.username }}
+                    </p>
+                    <p class="lead">{{ new.short_description }}</p>
+                    <div class="card-text">{{ new.text|linebreaks }}</div>
+                </div>
+            </div>
+            {% empty %}
+            <div class="alert alert-info">
+                Пока нет новостей. Зайдите позже!
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+{% endblock %}
