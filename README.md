@@ -1,1 +1,1 @@
-![Выделение_837](https://github.com/user-attachments/assets/0aefd404-0d4f-4849-bf45-c5de51c35643)
+![Выделение_848](https://github.com/user-attachments/assets/4d5ace15-7bdb-4c06-94e6-0cd78af64771)
